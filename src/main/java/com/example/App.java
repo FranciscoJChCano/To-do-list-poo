@@ -1,17 +1,20 @@
 package com.example;
 
-/**
- * Hello world!
- */
-public final class App {
-    private App() {
-    }
+import java.util.Scanner;
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
+public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}
+        TaskList taskList = new TaskList();
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Add task");
+            System.out.println("2. Remove task");
+            System.out.println("3. List tasks");
+            System.out.println("4. Mark task as completed");
+            System.out.println("5. Exit");
+            System.out.print("Select an option: ");
+            int option = scanner.nextInt();
+            scanner.nextLine();
